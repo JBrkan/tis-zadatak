@@ -67,15 +67,15 @@ public class TisZadatakApplication {
 
             List<Review> reviews = List.of(
                     Review.builder().product(p1).reviewer("John Doe").text("Great laptop, very fast!").rating(5).build(),
-                    Review.builder().product(p1).reviewer("Jane Smith").text("Good value for money.").rating(4).build(),
+                    Review.builder().product(p1).reviewer("Jane Smith").text("Good value for money.").rating(5).build(),
                     Review.builder().product(p2).reviewer("Mike Johnson").text("Amazing camera quality.").rating(5).build(),
-                    Review.builder().product(p2).reviewer("Emily Brown").text("Battery life could be better.").rating(3).build(),
-                    Review.builder().product(p3).reviewer("Alex Lee").text("Perfect sound isolation.").rating(5).build(),
+                    Review.builder().product(p2).reviewer("Emily Brown").text("Battery life could be better.").rating(4).build(),
+                    Review.builder().product(p3).reviewer("Alex Lee").text("Perfect sound isolation.").rating(4).build(),
                     Review.builder().product(p3).reviewer("Sarah Davis").text("Comfortable fit.").rating(4).build(),
-                    Review.builder().product(p4).reviewer("Tom Wilson").text("Stunning display quality.").rating(5).build(),
+                    Review.builder().product(p4).reviewer("Tom Wilson").text("Stunning display quality.").rating(3).build(),
                     Review.builder().product(p4).reviewer("Lisa Anderson").text("A bit pricey but worth it.").rating(4).build(),
-                    Review.builder().product(p5).reviewer("Peter Clark").text("Great typing experience.").rating(5).build(),
-                    Review.builder().product(p5).reviewer("Anna White").text("Keys are very responsive.").rating(4).build()
+                    Review.builder().product(p5).reviewer("Peter Clark").text("Great typing experience.").rating(2).build(),
+                    Review.builder().product(p5).reviewer("Anna White").text("Keys are very responsive.").rating(3).build()
             );
 
             reviewRepository.saveAll(reviews);
