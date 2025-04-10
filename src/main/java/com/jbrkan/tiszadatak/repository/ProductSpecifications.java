@@ -10,6 +10,10 @@ public class ProductSpecifications {
 
     public static Specification<Product> codeOrNameContains(String filter) {
         return (root, query, criteriaBuilder) -> {
+            if (filter == null || filter.trim().isEmpty()) {
+                return criteriaBuilder.conjunction();
+            }
+
             String searchFilter = "%" + filter.toLowerCase() + "%";
 
             return criteriaBuilder.or(
