@@ -25,7 +25,7 @@ public class ProductController {
     @GetMapping("/product")
     @RequestLogger
     public ResponseEntity<Page<ProductViewDto>> getProducts(Pageable pageable,
-                                                            @RequestParam String codeNameFilter) {
+                                                            @RequestParam(required = false) String codeNameFilter) {
         return ResponseEntity.ok(productService.getProductsByCodeNameFilter(pageable, codeNameFilter));
     }
 
